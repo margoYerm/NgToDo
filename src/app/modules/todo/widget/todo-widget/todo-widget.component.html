@@ -1,0 +1,13 @@
+<h1> Todo widget </h1>
+
+<todo-create-form-ui
+  (create)="onCreate($event)"
+></todo-create-form-ui>
+
+
+<todo-list-ui 
+  [todoList]="todoList$ | async"
+  (delete)="onDelete($event)"
+  (toggle)="onToggle($event)"
+  (edit)="onEdit($event)"
+></todo-list-ui>

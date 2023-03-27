@@ -1,0 +1,19 @@
+<ul>
+  <li *ngFor = "let todo of todoList">
+    
+    <todo-list-item-ui
+      *ngIf="!editIds.includes(todo.id)"
+      [todo]="todo"
+      (toggle)="onToggle(todo.id)"
+      (delete)="onDelete(todo.id)" 
+      (edit)="onEditMode(todo.id)"     
+    ></todo-list-item-ui>
+    
+    <todo-list-item-edit-ui
+      *ngIf="editIds.includes(todo.id)"
+      [todo]="todo"
+      (edit)="onEdit($event, todo.id)"
+    ></todo-list-item-edit-ui>
+
+  </li>
+</ul>
