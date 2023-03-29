@@ -1,5 +1,5 @@
 import { Todo } from "../../model/todo";
-import { TodoActions, todoActionsType } from "./todo.actions";
+import { TodoActions, todoActionsType, TodoLoadStateAction } from "./todo.actions";
 
 export const TODO_REDUCER_NODE = 'todo';
 
@@ -48,6 +48,10 @@ export const todoReducer = (state: TodoState = initialState, action: TodoActions
             return {
                 ...state,
                 todoList: state.todoList.filter(todo => todo.id !== action.payload.id),
+            };
+        case todoActionsType.load:
+            return {
+                ...action.payload.state
             };
         default: state;
     }

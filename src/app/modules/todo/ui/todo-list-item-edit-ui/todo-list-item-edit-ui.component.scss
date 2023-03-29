@@ -1,0 +1,32 @@
+.tli-edit-wrapper {
+    display: flex;    
+    //align-content: space-between;
+    align-items: center;
+}
+
+.tli-edit-name {
+    flex-grow: 1;
+    input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #000000;
+        font-size: 16px;
+    }
+}
+
+.tli-edit-actions {
+    flex-grow: 0;
+    button {
+        margin-left: 10px;
+        border: none;
+        background-color: #6395ec;
+        color: #ffffff;
+        font-weight: 700;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($color: #6395ec, $amount: 5%);
+        }
+    }
+}

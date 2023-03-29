@@ -1,0 +1,35 @@
+form {
+    margin: 20px 0;
+    display: flex;
+    align-content: space-between;    
+}
+
+input {
+    display: block;
+    border: none;
+    border-bottom: 2px solid #0ABAB5;    
+    flex-grow: 2;
+    font-size: 20px;
+    &:focus {
+        outline: none;
+        border: 1px dashed lightgray;
+        border-bottom: 2px solid #0ABAB5;  
+    }
+}
+
+button {
+    display: block;
+    margin-left: 20px;
+    padding: 5px;
+    color: #fff;
+    background-color: #0ABAB5;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($color: #0ABAB5, $amount: 5%);
+    }
+}

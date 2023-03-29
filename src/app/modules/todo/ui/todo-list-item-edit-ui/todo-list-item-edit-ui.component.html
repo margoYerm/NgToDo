@@ -1,7 +1,11 @@
-<form action="#" (ngSubmit)="onEdit()">
-  <input type="text" name="name" [(ngModel)]="name">
+<form class="tli-edit-wrapper" action="#" (ngSubmit)="onEdit()" >
+  <p class="tli-edit-name">
+    <input type="text" name="name" [(ngModel)]="name">
+  </p> 
 
-  <button [disabled]="!name">Ok</button>
+  <p class="tli-edit-actions">
+    <button [disabled]="!name">Ok</button>
 
-  <button type="button" (click)="onCancel()">Cancel</button>  
+    <button type="button" (click)="onCancel()">Cancel</button>  
+  </p>  
 </form>

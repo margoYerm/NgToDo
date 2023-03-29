@@ -27,5 +27,8 @@ import { TodoListItemEditUiComponent } from './ui/todo-list-item-edit-ui/todo-li
     TodoListItemUiComponent,
     TodoListItemEditUiComponent,
   ],
+  exports: [
+    TodoWidgetComponent,
+  ],
 })
 export class TodoModule { }
